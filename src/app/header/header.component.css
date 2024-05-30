@@ -1,0 +1,55 @@
+:host {
+  display: block;
+}
+/* src/app/app.component.css */
+mat-toolbar {
+  display: flex;
+  justify-content: space-between;
+  background-color: black;
+  gap: 10px;
+}
+
+.toolbar-title {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.spacer {
+  flex: 1;
+}
+.events {
+  padding: 10px;
+  background-color: transparent;
+  border: 2px solid white;
+  border-radius: 10px;
+  color: white;
+  transition: 0.5s;
+}
+.create-events {
+  padding: 10px;
+  background-color: transparent;
+  border: 2px solid orange;
+  border-radius: 10px;
+  color: white;
+  transition: 0.5s;
+}
+.download-events {
+  padding: 10px;
+  background-color: transparent;
+  border: 2px solid purple;
+  border-radius: 10px;
+  color: white;
+  transition: 0.5s;
+}
+.events:hover {
+  border-radius: 0px;
+  border: 2px solid orange;
+}
+.create-events:hover {
+  border-radius: 0px;
+  border: 2px solid white;
+}
+.download-events:hover {
+  border-radius: 0px;
+  border: 2px solid grey;
+}

@@ -1,0 +1,55 @@
+/* src/app/event-form/event-form.component.css */
+.event-form-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 50px;
+}
+
+.event-form {
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  background-color: white;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 600px;
+}
+
+.mat-form-field {
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.button-container {
+  display: flex;
+  justify-content: center;
+}
+
+.button-save {
+  background-color: #3f51b5;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.button-save:hover {
+  background-color: skyblue;
+}
+
+.button-save:disabled {
+  background-color: #b0bec5;
+  cursor: not-allowed;
+}
+
+@media (max-width: 600px) {
+  .event-form {
+    padding: 10px;
+  }
+}
