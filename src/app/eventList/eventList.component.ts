@@ -30,7 +30,11 @@ import { FormsModule } from '@angular/forms';
     <input matInput (input)="applyFilter()" [(ngModel)]="searchValue" placeholder="Search by title or location">
   </mat-form-field>
 </div>
-  
+  <div class="function-buttons">
+  <button class="events"  routerLink="/events">Events</button>
+    <button class="create-events" routerLink="/create">Create Event</button>
+    <button class="download-events" (click)="downloadExcel()">Download events</button>
+  </div>
   <div class="container">
   <mat-card *ngFor="let event of paginatedEvents" class="event-card">
     <mat-card-title>{{ event.title }}</mat-card-title>
@@ -97,5 +101,8 @@ export class EventListComponent {
     );
     this.paginatedEvents = this.filteredEvents
     this.datalength = this.paginatedEvents.length
+  }
+  downloadExcel(){
+    this.eventService.converDatatoExcel();
   }
 }

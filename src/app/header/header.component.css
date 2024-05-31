@@ -1,55 +1,92 @@
 :host {
   display: block;
 }
-/* src/app/app.component.css */
+
+/* General Styles */
 mat-toolbar {
   display: flex;
   justify-content: space-between;
+  align-items: center;
   background-color: black;
   gap: 10px;
+  padding: 0 10px; /* Add some padding for better appearance */
 }
 
 .toolbar-title {
   font-size: 24px;
   font-weight: bold;
+  color: white;
 }
 
 .spacer {
   flex: 1;
 }
+
+button {
+  padding: 10px;
+  background-color: transparent;
+  border-radius: 10px;
+  color: white;
+  transition: 0.5s;
+}
+
 .events {
-  padding: 10px;
-  background-color: transparent;
   border: 2px solid white;
-  border-radius: 10px;
-  color: white;
-  transition: 0.5s;
 }
+
 .create-events {
-  padding: 10px;
-  background-color: transparent;
   border: 2px solid orange;
-  border-radius: 10px;
-  color: white;
-  transition: 0.5s;
 }
+
 .download-events {
-  padding: 10px;
-  background-color: transparent;
   border: 2px solid purple;
-  border-radius: 10px;
-  color: white;
-  transition: 0.5s;
 }
+
+/* Hover States */
 .events:hover {
   border-radius: 0px;
   border: 2px solid orange;
 }
+
 .create-events:hover {
   border-radius: 0px;
   border: 2px solid white;
 }
+
 .download-events:hover {
   border-radius: 0px;
   border: 2px solid grey;
+}
+
+@media (max-width: 768px) {
+  mat-toolbar {
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 2px;
+    padding: 10px;
+  }
+
+  .toolbar-title {
+    font-size: 15px;
+    text-align: center;
+    margin-bottom: 10px;
+  }
+
+  .spacer {
+    display: none;
+  }
+
+  button {
+    display: none;
+  }
+}
+
+@media (max-width: 480px) {
+  .toolbar-title {
+    font-size: 18px;
+  }
+
+  button {
+    display: none;
+  }
 }

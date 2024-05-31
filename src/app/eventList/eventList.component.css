@@ -11,7 +11,7 @@
   width: 100%;
 }
 .container {
-  width: 70%;
+  width: 70vw;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -90,4 +90,57 @@
 .viewDetails:active {
   box-shadow: none;
   transform: translateY(0);
+}
+.function-buttons {
+  display: flex;
+  gap: 10px;
+  display: none;
+}
+button {
+  padding: 10px;
+  background-color: transparent;
+  border-radius: 10px;
+  color: black;
+  transition: 0.5s;
+}
+
+.events {
+  border: 2px solid white;
+}
+
+.create-events {
+  border: 2px solid orange;
+}
+
+.download-events {
+  border: 2px solid purple;
+}
+
+/* Hover States */
+.events:hover {
+  border-radius: 0px;
+  border: 2px solid orange;
+}
+
+.create-events:hover {
+  border-radius: 0px;
+  border: 2px solid white;
+}
+
+.download-events:hover {
+  border-radius: 0px;
+  border: 2px solid grey;
+}
+
+@media (max-width: 720px) {
+  .container {
+    width: 100%;
+  }
+  .event-card {
+    width: 100%;
+  }
+  .function-buttons {
+    display: flex;
+    gap: 10px;
+  }
 }
